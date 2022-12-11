@@ -1,8 +1,5 @@
 <main class="main">
-  <header class="title" *ngIf="renderItems[0]">
-    <h1 class="enterRightTop">About</h1>
-    <div class="underLine enterRightTop" *ngIf="renderItems[3]"></div>
-  </header>
+  <app-title *ngIf="renderItems[0]"></app-title>
 
   <div class="myFeatures" *ngIf="!renderItems[1]"></div>
   <div class="myFeatures" *ngIf="renderItems[1]">

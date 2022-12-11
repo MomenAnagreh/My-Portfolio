@@ -9,9 +9,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { AboutComponent } from './pages/about/about.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { TitleComponent } from './shared/title/title.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, TitleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
