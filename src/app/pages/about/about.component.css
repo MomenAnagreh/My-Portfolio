@@ -1,0 +1,351 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  min-width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.title h1 {
+  font-size: 45px;
+  color: rgb(93, 93, 93);
+  font-weight: 500;
+}
+
+.underLine {
+  width: 70px;
+  border-bottom: 5px solid rgb(93, 93, 93);
+}
+
+.myFeatures {
+  width: 65%;
+  height: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.featureWrapp {
+  min-width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature {
+  background-color: rgb(233 65 65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+
+  width: 100px;
+  height: 120px;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  transform: rotate(90deg);
+}
+
+.icon {
+  transform: rotate(270deg) scale(2);
+}
+
+.featureDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureDetails h1 {
+  color: rgb(93, 93, 93);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.featureDetails h3 {
+  color: rgb(129, 129, 129);
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+
+.mySkills {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 100px;
+}
+
+.sect {
+  height: 100%;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.imgFrame {
+  width: 330px;
+  height: 290px;
+  clip-path: polygon(50% -20%, 100% 25%, 100% 75%, 50% 125%, 0 75%, 0 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 128, 160);
+}
+
+.imgFrameInner {
+  width: 327px;
+  height: 285px;
+  clip-path: polygon(50% -20%, 100% 25%, 100% 75%, 50% 125%, 0 75%, 0 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.imgWrapp {
+  width: 300px;
+  height: 250px;
+  clip-path: polygon(50% -20%, 100% 25%, 100% 75%, 50% 125%, 0 75%, 0 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectQ {
+  color: rgb(66, 66, 66);
+  font-size: 30px;
+  margin: 20px;
+}
+
+.sectBody {
+  text-align: center;
+  line-height: 25px;
+  font-size: 18px;
+  color: rgba(46, 46, 46, 0.7);
+  width: 550px;
+}
+
+.skillWrapp {
+  width: 100%;
+  height: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.skillName {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(233, 65, 65);
+  color: white;
+}
+
+.skillNum {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lightgray;
+}
+
+.skillColor {
+  height: 100%;
+  width: 90%;
+  display: flex;
+}
+
+.skillColor1 {
+  height: 100%;
+  background-color: rgb(0, 128, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillPercent {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  color: rgb(107, 107, 107);
+}
+
+.enterRightTop {
+  -webkit-animation: enterRight 0.2s linear;
+  animation: enterRight 0.2s linear;
+  position: relative;
+}
+
+.enterRightTop1 {
+  -webkit-animation: enterRight 0.2s linear;
+  animation: enterRight 0.2s linear;
+  position: relative;
+}
+
+.flipIcon {
+  -webkit-animation: flips 0.5s linear;
+  animation: flips 0.5s linear;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+}
+
+.textOpacity {
+  -webkit-animation: opacitys 0.5s linear;
+  animation: opacitys 0.5s linear;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.sectEnterRight {
+  -webkit-animation: enterRight 0.5s linear;
+  animation: enterRight 0.5s linear;
+  position: relative;
+}
+
+.sectEnterLeft {
+  -webkit-animation: enterLeft 0.5s linear;
+  animation: enterLeft 0.5s linear;
+  position: relative;
+}
+
+.imgRotate {
+  -webkit-animation: flips1 0.5s linear;
+  animation: flips1 0.5s linear;
+}
+
+.colorAnim {
+  -webkit-animation: enterRight1 0.7s linear;
+  animation: enterRight1 0.7s linear;
+  position: relative;
+}
+
+@keyframes enterRight {
+  0% {
+    right: calc(40% - 10%);
+  }
+  25% {
+    right: calc(40% - 20%);
+  }
+  50% {
+    right: calc(40% - 25%);
+  }
+  75% {
+    right: calc(40% - 35%);
+  }
+  100% {
+    right: calc(40% - 40%);
+  }
+}
+
+@keyframes enterRight1 {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 20%;
+  }
+  50% {
+    width: 40%;
+  }
+  75% {
+    width: 60%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes enterLeft {
+  0% {
+    left: calc(40% - 10%);
+  }
+  25% {
+    left: calc(40% - 20%);
+  }
+  50% {
+    left: calc(40% - 25%);
+  }
+  75% {
+    left: calc(40% - 35%);
+  }
+  100% {
+    left: calc(40% - 40%);
+  }
+}
+
+@keyframes flips {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  25% {
+    transform: rotateZ(270deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes flips1 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes opacitys {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
