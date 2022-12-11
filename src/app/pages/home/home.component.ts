@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  check: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(public router: Router) {}
 
-  ngAfterContentChecked() {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      document.querySelectorAll('button')[0].style.display = 'flex';
+    }, 6000);
+  }
 
   iconDown() {
     document.querySelectorAll('.expandIcon')[0].innerHTML = 'expand_more';
@@ -22,5 +27,10 @@ export class HomeComponent implements OnInit {
 
   scrollDown() {
     window.scroll(0, window.innerHeight);
+    const test = document.querySelectorAll('main')[0].innerHTML;
+    document.querySelectorAll('main')[0].innerHTML = '';
+    setTimeout(() => {
+      document.querySelectorAll('main')[0].innerHTML = test;
+    }, 500);
   }
 }
