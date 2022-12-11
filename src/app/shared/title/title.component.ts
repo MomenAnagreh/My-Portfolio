@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -10,14 +10,9 @@ export class TitleComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    if (window.pageYOffset > 100) {
-      setTimeout(() => {
-        this.show = true;
-      }, 250);
-    }
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.show = true;
+    }, 250);
   }
 }
