@@ -1,0 +1,38 @@
+.title {
+  min-width: 100vw;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 80px;
+}
+
+.title h1 {
+  font-size: 45px;
+  color: rgb(93, 93, 93);
+  font-weight: 500;
+}
+
+.underLine {
+  width: 70px;
+  border-bottom: 5px solid rgb(93, 93, 93);
+}
+
+.enterRightTop {
+  -webkit-animation: enterRight 0.1s linear;
+  animation: enterRight 0.1s linear;
+  position: relative;
+}
+
+@keyframes enterRight {
+  0% {
+    right: calc(45% - 15%);
+  }
+  50% {
+    right: calc(45% - 30%);
+  }
+  100% {
+    right: calc(45% - 45%);
+  }
+}

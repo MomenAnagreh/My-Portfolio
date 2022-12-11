@@ -10,7 +10,7 @@ export class AboutComponent implements OnInit {
   @Input() features!: Feature[];
   @Input() details!: Details;
   show: boolean[] = [];
-  renderItems: boolean[] = [false, false, false, false];
+  renderItems: boolean[] = [false, false, false];
 
   constructor() {}
 
@@ -24,12 +24,6 @@ export class AboutComponent implements OnInit {
       setTimeout(() => {
         this.renderItems[0] = true;
       }, 300);
-    }
-
-    if (window.pageYOffset > 250) {
-      setTimeout(() => {
-        this.renderItems[3] = true;
-      }, 400);
     }
 
     if (window.pageYOffset > 400) {
