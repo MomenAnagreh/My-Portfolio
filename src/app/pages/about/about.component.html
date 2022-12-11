@@ -1,10 +1,11 @@
 <main class="main">
-  <header class="title">
+  <header class="title" *ngIf="renderItems[0]">
     <h1 class="enterRightTop">About</h1>
-    <div class="underLine enterRightTop1" *ngIf="show"></div>
+    <div class="underLine enterRightTop" *ngIf="renderItems[3]"></div>
   </header>
 
-  <div class="myFeatures">
+  <div class="myFeatures" *ngIf="!renderItems[1]"></div>
+  <div class="myFeatures" *ngIf="renderItems[1]">
     <div class="featureWrapp" *ngFor="let feature of features">
       <div class="feature flipIcon">
         <mat-icon class="icon">{{ feature.icon }}</mat-icon>
@@ -16,29 +17,26 @@
     </div>
   </div>
 
-  <div class="mySkills">
+  <div class="mySkills" *ngIf="!renderItems[2]"></div>
+  <div class="mySkills" *ngIf="renderItems[2]">
     <div class="sect sectEnterRight">
-      <div class="imgFrame imgRotate">
-        <div class="imgFrameInner">
-          <img src="../../../assets/image3.jpg" alt="" class="imgWrapp" />
-        </div>
-      </div>
+      <img src="../../../assets/image.jpg" alt="" class="imgWrapp imgRotate" />
       <h1 class="sectQ">{{ details.question }}</h1>
       <div class="sectBody">
         {{ details.details }}
       </div>
     </div>
     <div class="sect sectEnterLeft">
-      <div *ngFor="let skill of details.skills" class="skillWrapp">
+      <div *ngFor="let skill of details.skills; index as i" class="skillWrapp">
         <div class="skillName">{{ skill.name }}</div>
-        <div class="skillNum" #color>
-          <div class="skillColor colorAnim" *ngIf="show1">
+        <div class="skillNum">
+          <div class="skillColorWrapp colorAnim" *ngIf="show[i]">
             <span
-              class="skillColor1"
+              class="skillColor"
               style="width: {{ skill.percent }}%;"
             ></span>
           </div>
-          <div *ngIf="!show1"></div>
+          <div *ngIf="!show[i]"></div>
           <p class="skillPercent">{{ skill.percent }}%</p>
         </div>
       </div>

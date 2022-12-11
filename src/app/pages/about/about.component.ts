@@ -1,12 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  Input,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Details, Feature } from '../../services/data.interface';
 
 @Component({
@@ -17,19 +9,44 @@ import { Details, Feature } from '../../services/data.interface';
 export class AboutComponent implements OnInit {
   @Input() features!: Feature[];
   @Input() details!: Details;
-  @ViewChild('color') color!: ElementRef;
-  show: boolean = false;
-  show1: boolean = false;
+  show: boolean[] = [];
+  renderItems: boolean[] = [false, false, false, false];
 
   constructor() {}
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.show = true;
-    }, 1200);
+    this.show = Array(this.details.skills.length).fill(false);
+  }
 
-    setTimeout(() => {
-      this.show1 = true;
-    }, 1500);
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.pageYOffset > 200) {
+      setTimeout(() => {
+        this.renderItems[0] = true;
+      }, 300);
+    }
+
+    if (window.pageYOffset > 250) {
+      setTimeout(() => {
+        this.renderItems[3] = true;
+      }, 400);
+    }
+
+    if (window.pageYOffset > 400) {
+      setTimeout(() => {
+        this.renderItems[1] = true;
+      }, 500);
+    }
+
+    if (window.pageYOffset > 600) {
+      setTimeout(() => {
+        this.renderItems[2] = true;
+        for (let i = 0; i < this.show.length; i++) {
+          setTimeout(() => {
+            this.show[i] = true;
+          }, (i + 4) * 100);
+        }
+      }, 600);
+    }
   }
 }

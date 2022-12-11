@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +8,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   check: boolean = false;
 
-  constructor(public router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -27,10 +26,5 @@ export class HomeComponent implements OnInit {
 
   scrollDown() {
     window.scroll(0, window.innerHeight);
-    const test = document.querySelectorAll('main')[0].innerHTML;
-    document.querySelectorAll('main')[0].innerHTML = '';
-    setTimeout(() => {
-      document.querySelectorAll('main')[0].innerHTML = test;
-    }, 500);
   }
 }
