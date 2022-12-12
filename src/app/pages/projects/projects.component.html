@@ -4,12 +4,21 @@
 
   <div class="projects">
     <div class="categorys" *ngIf="show1">
-      <button class="category">ALL</button>
+      <button
+        class="category"
+        id="0"
+        (click)="cat(0)"
+        style="background-color: rgb(233, 65, 65); color: white"
+      >
+        ALL
+      </button>
+      <button class="category" id="1" (click)="cat(1)">Angular</button>
+      <button class="category" id="2" (click)="cat(2)">React</button>
     </div>
 
     <div class="listWrapp">
       <div
-        *ngFor="let project of dataService.projects; index as i"
+        *ngFor="let project of projects; index as i"
         (mouseenter)="imgHover(project.name)"
         (mouseleave)="imgLeave(project.name)"
       >

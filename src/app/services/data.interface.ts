@@ -18,4 +18,5 @@ export interface Skill {
 export interface Project {
   name: string;
   image: string;
+  lang: string;
 }

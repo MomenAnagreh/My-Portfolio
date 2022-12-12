@@ -13,6 +13,7 @@ export class ProjectsComponent implements OnInit {
   popUp: boolean = false;
   projectD: any = [];
   index: number = 0;
+  projects: any[] = [];
 
   constructor(public dataService: DataService) {}
 
@@ -44,6 +45,7 @@ export class ProjectsComponent implements OnInit {
   onWindowScroll() {
     if (window.pageYOffset > window.innerHeight * 1.2) {
       setTimeout(() => {
+        this.projects = this.dataService.projects;
         this.show = true;
       }, 200);
     }
@@ -63,30 +65,61 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProject(name: string = '') {
-    this.dataService.projectDetails.forEach((project, i) => {
+    this.dataService.projectDetails.forEach((project) => {
       if (project.Name === name) {
         this.projectD = project;
         this.popUp = true;
-        this.index = i;
+        this.projects.forEach((item, i) => {
+          if (item.name === name) {
+            this.index = i;
+          }
+        });
       }
     });
   }
 
   next() {
-    if (this.index < this.dataService.projectDetails.length - 1) {
+    if (this.index < this.projects.length - 1) {
       ++this.index;
-      this.projectD = this.dataService.projectDetails[this.index];
+      const name = this.projects[this.index].name;
+      this.projectD = this.dataService.filterDetails(name)[0];
     }
   }
 
   back() {
     if (this.index > 0) {
       --this.index;
-      this.projectD = this.dataService.projectDetails[this.index];
+      const name = this.projects[this.index].name;
+      this.projectD = this.dataService.filterDetails(name)[0];
     }
   }
 
   exit() {
     this.popUp = false;
+  }
+
+  cat(id: number) {
+    [0, 1, 2].forEach((num) => {
+      const doc = document.getElementById(`${num}`);
+      if (num === id) {
+        if (doc) {
+          let lan = doc.innerHTML.trim().toLowerCase();
+          let arr: any[] = [];
+          if (lan !== 'all') {
+            this.projects = this.dataService.filterProjects(lan);
+          } else {
+            this.projects = this.dataService.projects;
+          }
+          this.index = 0;
+          doc.style.backgroundColor = 'rgb(233, 65, 65)';
+          doc.style.color = 'white';
+        }
+      } else {
+        if (doc) {
+          doc.style.backgroundColor = 'transparent';
+          doc.style.color = 'rgb(93, 93, 93)';
+        }
+      }
+    });
   }
 }
