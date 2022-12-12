@@ -48,18 +48,22 @@ export class DataService {
     {
       name: 'Skubana Dashboard',
       image: '../../assets/projectsImages/Skubana-Web-Application.png',
+      lang: 'Angular',
     },
     {
       name: 'Pharmacy Platform (JUDI)',
       image: '../../assets/projectsImages/Capital-Rx-Web-Application.jpeg',
+      lang: 'Angular',
     },
     {
       name: 'Mckinsey Insights App',
       image: '../../assets/projectsImages/Mckinsey-Web-Application.jpg',
+      lang: 'Angular',
     },
     {
       name: 'Engineering Collaboration System',
       image: '../../assets/projectsImages/AECOM-Web-Application.jpg',
+      lang: 'React',
     },
   ];
 
@@ -156,4 +160,12 @@ export class DataService {
   ];
 
   constructor() {}
+
+  filterProjects(lang: string) {
+    return this.projects.filter((item) => item.lang.toLowerCase() === lang);
+  }
+
+  filterDetails(name: string) {
+    return this.projectDetails.filter((item) => item.Name === name);
+  }
 }
