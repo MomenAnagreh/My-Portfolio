@@ -106,9 +106,9 @@ export class ProjectsComponent implements OnInit {
   }
 
   cat(id: number) {
-    [0, 1, 2].forEach((num) => {
-      const doc = document.getElementById(`${num}`);
-      if (num === id) {
+    ['all', 'angular', 'react'].forEach((elem, i) => {
+      const doc = document.getElementById(`${elem}`);
+      if (i === id) {
         if (doc) {
           let lan = doc.innerHTML.trim().toLowerCase();
           let arr: any[] = [];

@@ -4,8 +4,17 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+
+.navBar {
+  width: 100vw;
+}
+
+.divider {
+  height: 20px;
+  background-color: transparent;
 }
 
 .myFeatures {
@@ -197,6 +206,11 @@
   -webkit-animation: enterRight1 0.3s linear;
   animation: enterRight1 0.3s linear;
   position: relative;
+}
+
+.navBar {
+  -webkit-animation: goDown 0.5s linear;
+  animation: goDown 0.5s linear;
 }
 
 @keyframes enterRight2 {

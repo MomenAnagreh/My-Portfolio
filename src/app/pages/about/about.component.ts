@@ -42,5 +42,26 @@ export class AboutComponent implements OnInit {
         }
       }, 600);
     }
+
+    if (window.pageYOffset > window.innerHeight) {
+      const doc = document.querySelector<HTMLElement>('.mainNav');
+      const doc1 = document.querySelector<HTMLElement>('.divider');
+
+      if (doc && doc1) {
+        doc.style.position = 'fixed';
+        doc1.style.position = 'relative';
+
+        doc.classList.add('expand');
+      }
+    } else {
+      const doc = document.querySelector<HTMLElement>('.mainNav');
+      const doc1 = document.querySelector<HTMLElement>('.divider');
+
+      if (doc && doc1) {
+        doc.style.position = 'relative';
+        doc1.style.position = 'fixed';
+        doc.classList.remove('expand');
+      }
+    }
   }
 }

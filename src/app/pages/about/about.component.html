@@ -1,4 +1,10 @@
-<main class="main">
+<div class="main">
+  <div class="navBar">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+  <div class="divider"></div>
+
   <app-title *ngIf="renderItems[0]" [title]="'About'"></app-title>
 
   <div class="myFeatures" *ngIf="!renderItems[1]"></div>
@@ -39,4 +45,4 @@
       </div>
     </div>
   </div>
-</main>
+</div>
