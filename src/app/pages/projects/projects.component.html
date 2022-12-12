@@ -6,14 +6,14 @@
     <div class="categorys" *ngIf="show1">
       <button
         class="category"
-        id="0"
+        id="all"
         (click)="cat(0)"
         style="background-color: rgb(233, 65, 65); color: white"
       >
         ALL
       </button>
-      <button class="category" id="1" (click)="cat(1)">Angular</button>
-      <button class="category" id="2" (click)="cat(2)">React</button>
+      <button class="category" id="angular" (click)="cat(1)">Angular</button>
+      <button class="category" id="react" (click)="cat(2)">React</button>
     </div>
 
     <div class="listWrapp">
