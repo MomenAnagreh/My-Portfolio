@@ -1,4 +1,8 @@
 <header class="title">
-  <h1 class="enterRightTop">{{ title }}</h1>
-  <div class="underLine enterRightTop" *ngIf="show"></div>
+  <h1 class="enterRightTop" style="color: {{ color }};">{{ title }}</h1>
+  <div
+    class="underLine enterRightTop"
+    *ngIf="show"
+    style="border-bottom: 5px solid {{ color }};"
+  ></div>
 </header>
