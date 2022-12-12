@@ -1,5 +1,5 @@
 <main class="main">
-  <app-title *ngIf="renderItems[0]"></app-title>
+  <app-title *ngIf="renderItems[0]" [title]="'About'"></app-title>
 
   <div class="myFeatures" *ngIf="!renderItems[1]"></div>
   <div class="myFeatures" *ngIf="renderItems[1]">

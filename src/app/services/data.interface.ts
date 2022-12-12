@@ -14,3 +14,8 @@ export interface Skill {
   name: string;
   percent: string;
 }
+
+export interface Project {
+  name: string;
+  image: string;
+}
