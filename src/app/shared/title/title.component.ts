@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TitleComponent implements OnInit {
   @Input() title: string = '';
+  @Input() color: string = 'rgb(93, 93, 93)';
   show: boolean = false;
 
   constructor() {}

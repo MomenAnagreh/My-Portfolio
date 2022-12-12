@@ -19,6 +19,13 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.renderImg = Array(this.dataService.projects.length).fill(false);
+    const doc = document.querySelector<HTMLElement>('.listWrapp');
+    if (doc) {
+      doc.style.overflowY = 'hidden';
+      setTimeout(() => {
+        doc.style.overflowY = 'auto';
+      }, 1000);
+    }
   }
 
   imgHover(name: string) {
@@ -55,8 +62,8 @@ export class ProjectsComponent implements OnInit {
       }, 400);
     }
 
-    for (let i = 0; i < this.renderImg.length; i++) {
-      if (window.pageYOffset > window.innerHeight * 1.3 + 200) {
+    if (window.pageYOffset > window.innerHeight * 1.3 + 200) {
+      for (let i = 0; i < this.renderImg.length; i++) {
         setTimeout(() => {
           this.renderImg[i] = true;
         }, 300 + (i + 1) * 300);

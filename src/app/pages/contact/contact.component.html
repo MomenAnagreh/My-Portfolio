@@ -1,0 +1,82 @@
+<div class="mainContact">
+  <svg
+    preserveAspectRatio="none"
+    viewBox="0 0 100 102"
+    height="120"
+    width="100%"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    class="svgcolor-light"
+  >
+    <path
+      d="M0 0 L50 100 L100 0 Z"
+      fill="rgb(236, 235, 235)"
+      stroke="transparent"
+    ></path>
+  </svg>
+
+  <div class="innerWrapp">
+    <app-title
+      [title]="'Contact'"
+      [color]="'white'"
+      *ngIf="renderItems[0]"
+    ></app-title>
+
+    <app-title *ngIf="!renderItems[0]"></app-title>
+
+    <p class="question" *ngIf="renderItems[1]">
+      Have a question or want to work together?
+    </p>
+
+    <p class="question" *ngIf="!renderItems[1]"></p>
+
+    <form
+      (ngSubmit)="onSubmit()"
+      [formGroup]="form"
+      class="formWrapp"
+      *ngIf="renderItems[2]"
+    >
+      <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        required
+        formControlName="name"
+        class="name"
+      />
+      <input
+        type="text"
+        placeholder="Email"
+        email
+        name="email"
+        required
+        formControlName="email"
+        class="name"
+      />
+      <textarea
+        placeholder="Your Message"
+        name="messages"
+        required
+        formControlName="messages"
+        class="message"
+      ></textarea>
+      <input type="button" value="Send" (click)="send()" class="sendBtn" />
+    </form>
+
+    <form
+      (ngSubmit)="onSubmit()"
+      [formGroup]="form"
+      class="formWrapp"
+      *ngIf="!renderItems[2]"
+    ></form>
+  </div>
+
+  <div class="footer">
+    <p class="footName">MOMEN ALANAGREH</p>
+    <p class="footDate">©2022</p>
+
+    <button class="scrollUp" (click)="scrollUp()">
+      <mat-icon class="iconUp">keyboard_double_arrow_up </mat-icon>
+    </button>
+  </div>
+</div>

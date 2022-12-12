@@ -11,9 +11,19 @@ import { AboutComponent } from './pages/about/about.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { TitleComponent } from './shared/title/title.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, TitleComponent, ProjectsComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    TitleComponent,
+    ProjectsComponent,
+    ContactComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,6 +31,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     MatIconModule,
     MatButtonModule,
     MatProgressBarModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
