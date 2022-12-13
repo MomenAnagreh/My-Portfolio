@@ -4,7 +4,6 @@ import {
   FormBuilder,
   FormControl,
   FormGroup,
-  NgForm,
   Validators,
 } from '@angular/forms';
 
@@ -48,24 +47,21 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    // if (contactForm.valid) {
-    //   const email = contactForm.value;
-    //   const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    //   this.http
-    //     .post(
-    //       'https://formspree.io/asdlf7asdf',
-    //       { name: email.name, replyto: email.email, message: email.messages },
-    //       { headers: headers }
-    //     )
-    //     .subscribe((response) => {
-    //       console.log(response);
-    //     });
-    // }
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    this.http
+      .post(
+        'https://formspree.io/f/mnqreyzq',
+        {
+          name: this.name.value,
+          from: this.email.value,
+          message: this.messages.value,
+        },
+        { headers: headers }
+      )
+      .subscribe();
   }
 
-  send() {
-    console.log(this.name.value, this.email.value, this.messages.value);
-  }
+  send() {}
 
   scrollUp() {
     window.scroll(0, 0);
@@ -90,5 +86,9 @@ export class ContactComponent implements OnInit {
         this.renderItems[2] = true;
       }, 500);
     }
+  }
+
+  disable() {
+    return this.name.valid && this.email.valid && this.messages.valid;
   }
 }
