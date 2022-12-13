@@ -44,6 +44,11 @@
         formControlName="name"
         class="name"
       />
+
+      <div *ngIf="!name.valid && name.dirty && name.touched" class="error">
+        Name must be more than 1 character
+      </div>
+
       <input
         type="text"
         placeholder="Email"
@@ -53,6 +58,11 @@
         formControlName="email"
         class="name"
       />
+
+      <div *ngIf="!email.valid && email.dirty && email.touched" class="error">
+        Enter a valid email
+      </div>
+
       <textarea
         placeholder="Your Message"
         name="messages"
@@ -60,7 +70,20 @@
         formControlName="messages"
         class="message"
       ></textarea>
-      <input type="button" value="Send" (click)="send()" class="sendBtn" />
+
+      <div
+        *ngIf="!messages.valid && messages.dirty && messages.touched"
+        class="error"
+      >
+        Must add a message
+      </div>
+
+      <input
+        type="submit"
+        value="Send"
+        class="sendBtn"
+        [disabled]="!disable()"
+      />
     </form>
 
     <form
