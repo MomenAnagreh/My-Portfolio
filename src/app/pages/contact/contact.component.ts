@@ -48,9 +48,10 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const URL = 'https://formspree.io/f/mnqreyzq';
     this.http
       .post(
-        'https://formspree.io/f/mnqreyzq',
+        URL,
         {
           name: this.name.value,
           from: this.email.value,
@@ -58,11 +59,11 @@ export class ContactComponent implements OnInit {
         },
         { headers: headers }
       )
-      .subscribe();
+      .subscribe((res) => {
+        alert('Message sent');
+        this.form.reset();
+      });
   }
-
-  send() {}
-
   scrollUp() {
     window.scroll(0, 0);
   }
