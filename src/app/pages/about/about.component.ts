@@ -43,7 +43,7 @@ export class AboutComponent implements OnInit {
       }, 600);
     }
 
-    if (window.pageYOffset > window.innerHeight - 50) {
+    if (window.pageYOffset > window.innerHeight) {
       const doc = document.querySelector<HTMLElement>('.mainNav');
       const doc1 = document.querySelector<HTMLElement>('.divider');
 

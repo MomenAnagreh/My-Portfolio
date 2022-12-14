@@ -32,7 +32,7 @@ export class NavBarComponent implements OnInit {
 
     if (
       window.pageYOffset > window.innerHeight &&
-      window.pageYOffset < window.innerHeight * 2 - 200
+      window.pageYOffset < window.innerHeight * 2 - 100
     ) {
       const doc = document.getElementById('1');
       if (doc) {
@@ -51,7 +51,7 @@ export class NavBarComponent implements OnInit {
 
     if (
       window.pageYOffset > window.innerHeight * 2 &&
-      window.pageYOffset < window.innerHeight * 3 - 300
+      window.pageYOffset < window.innerHeight * 3 - 100
     ) {
       const doc = document.getElementById('2');
       if (doc) {
@@ -68,7 +68,7 @@ export class NavBarComponent implements OnInit {
       }
     }
 
-    if (window.pageYOffset > window.innerHeight * 3 - 200) {
+    if (window.pageYOffset > window.innerHeight * 3 - 100) {
       const doc = document.getElementById('3');
       if (doc) {
         doc.classList.replace('btn', 'btn1');
@@ -90,10 +90,10 @@ export class NavBarComponent implements OnInit {
       window.scroll(0, 0);
     }
     if (name === 'about') {
-      window.scroll(0, window.innerHeight);
+      window.scroll(0, window.innerHeight + 10);
     }
     if (name === 'projects') {
-      window.scroll(0, window.innerHeight * 2);
+      window.scroll(0, window.innerHeight * 2 + 10);
     }
     if (name === 'contact') {
       window.scroll(0, window.innerHeight * 3 + 100);
