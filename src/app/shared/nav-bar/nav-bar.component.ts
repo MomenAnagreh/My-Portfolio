@@ -51,7 +51,7 @@ export class NavBarComponent implements OnInit {
 
     if (
       window.pageYOffset > window.innerHeight * 2 &&
-      window.pageYOffset < window.innerHeight * 3
+      window.pageYOffset < window.innerHeight * 3 - 200
     ) {
       const doc = document.getElementById('2');
       if (doc) {
@@ -68,7 +68,7 @@ export class NavBarComponent implements OnInit {
       }
     }
 
-    if (window.pageYOffset > window.innerHeight * 3) {
+    if (window.pageYOffset > window.innerHeight * 3 - 200) {
       const doc = document.getElementById('3');
       if (doc) {
         doc.classList.replace('btn', 'btn1');
