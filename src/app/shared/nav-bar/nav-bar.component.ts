@@ -32,7 +32,7 @@ export class NavBarComponent implements OnInit {
 
     if (
       window.pageYOffset > window.innerHeight &&
-      window.pageYOffset < window.innerHeight * 2
+      window.pageYOffset < window.innerHeight * 2 - 200
     ) {
       const doc = document.getElementById('1');
       if (doc) {
@@ -51,7 +51,7 @@ export class NavBarComponent implements OnInit {
 
     if (
       window.pageYOffset > window.innerHeight * 2 &&
-      window.pageYOffset < window.innerHeight * 3 - 200
+      window.pageYOffset < window.innerHeight * 3 - 300
     ) {
       const doc = document.getElementById('2');
       if (doc) {
