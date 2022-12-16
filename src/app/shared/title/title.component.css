@@ -36,3 +36,9 @@
     right: calc(45% - 45%);
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .title h1 {
+    font-size: 35px;
+  }
+}
