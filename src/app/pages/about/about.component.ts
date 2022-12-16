@@ -48,8 +48,8 @@ export class AboutComponent implements OnInit {
       const doc1 = document.querySelector<HTMLElement>('.divider');
 
       if (doc && doc1) {
-        doc.style.position = 'fixed';
         doc1.style.position = 'relative';
+        doc.style.position = 'fixed';
         doc.classList.add('expand');
       }
     } else {
@@ -57,8 +57,8 @@ export class AboutComponent implements OnInit {
       const doc1 = document.querySelector<HTMLElement>('.divider');
 
       if (doc && doc1) {
-        doc.style.position = 'relative';
         doc1.style.position = 'fixed';
+        doc.style.position = 'relative';
         doc.classList.remove('expand');
       }
     }
