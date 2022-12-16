@@ -31,8 +31,8 @@ export class NavBarComponent implements OnInit {
     }
 
     if (
-      window.pageYOffset > window.innerHeight &&
-      window.pageYOffset < window.innerHeight * 2 - 100
+      window.pageYOffset >= window.innerHeight - 10 &&
+      window.pageYOffset < window.innerHeight * 2
     ) {
       const doc = document.getElementById('1');
       if (doc) {
@@ -50,8 +50,8 @@ export class NavBarComponent implements OnInit {
     }
 
     if (
-      window.pageYOffset > window.innerHeight * 2 &&
-      window.pageYOffset < window.innerHeight * 3 - 100
+      window.pageYOffset >= window.innerHeight * 2 - 10 &&
+      window.pageYOffset < window.innerHeight * 3
     ) {
       const doc = document.getElementById('2');
       if (doc) {
@@ -68,7 +68,7 @@ export class NavBarComponent implements OnInit {
       }
     }
 
-    if (window.pageYOffset > window.innerHeight * 3 - 100) {
+    if (window.pageYOffset >= window.innerHeight * 3 - 10) {
       const doc = document.getElementById('3');
       if (doc) {
         doc.classList.replace('btn', 'btn1');
@@ -87,16 +87,28 @@ export class NavBarComponent implements OnInit {
 
   move(name: string) {
     if (name === 'home') {
-      window.scroll(0, 0);
+      const doc = document.querySelector('.mainWrapper');
+      if (doc) {
+        doc.scrollIntoView();
+      }
     }
     if (name === 'about') {
-      window.scroll(0, window.innerHeight + 10);
+      const doc = document.querySelector('.main');
+      if (doc) {
+        doc.scrollIntoView();
+      }
     }
     if (name === 'projects') {
-      window.scroll(0, window.innerHeight * 2 + 10);
+      const doc = document.querySelector('.mainProjects');
+      if (doc) {
+        doc.scrollIntoView();
+      }
     }
     if (name === 'contact') {
-      window.scroll(0, window.innerHeight * 3 + 100);
+      const doc = document.querySelector('.mainContact');
+      if (doc) {
+        doc.scrollIntoView();
+      }
     }
   }
 }

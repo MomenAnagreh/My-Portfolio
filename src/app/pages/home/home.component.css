@@ -20,11 +20,8 @@ button {
   align-items: center;
   position: absolute;
   background-color: transparent;
-  font-family: "Roboto", sans-serif;
-  color: rgb(233 65 65);
   width: 250px;
   height: 70px;
-  font-size: 2em;
   border-radius: 5px;
   opacity: 0.5;
   top: 10vh;
@@ -34,6 +31,9 @@ button {
   margin: auto;
   transition: 0.3s;
   border: none;
+  color: rgb(233 65 65);
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
   cursor: pointer;
 }
 
@@ -56,14 +56,29 @@ button:hover {
   width: 0px;
   opacity: 0.75;
   background-color: white;
-  box-shadow: #e9f1f1 0px 0px 5px 1px;
+  box-shadow: #e9f1f1 0px 100px 5px 1px;
   opacity: 0.5;
   bottom: 100vh;
   top: 0px;
   left: 0px;
   right: 0px;
   margin: auto;
-  transform: rotate(60deg);
+  transform: rotate(120deg);
+}
+
+.light1 {
+  position: absolute;
+  width: 0px;
+  opacity: 0.75;
+  background-color: white;
+  box-shadow: #e9f1f1 0px 100px 5px 1px;
+  opacity: 0.5;
+  bottom: 0px;
+  top: 100vh;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  transform: rotate(120deg);
 }
 
 .extra {
@@ -73,157 +88,126 @@ button:hover {
 .x1 {
   -webkit-animation: floatDown 10s infinite linear;
   animation: floatDown 10s infinite linear;
+
+  animation-duration: 12s;
 }
 
 .x2 {
   -webkit-animation: floatDown 9s infinite linear;
   animation: floatDown 9s infinite linear;
-  left: 15%;
+
+  animation-duration: 11s;
 }
 
 .x3 {
   -webkit-animation: floatDown 8s infinite linear;
   animation: floatDown 8s infinite linear;
-  left: -15%;
+
+  animation-duration: 10s;
 }
 
 .x4 {
   -webkit-animation: floatDown 7s infinite linear;
   animation: floatDown 7s infinite linear;
-  left: -34%;
+
+  animation-duration: 9s;
 }
 
 .x5 {
   -webkit-animation: floatDown 6s infinite linear;
   animation: floatDown 6s infinite linear;
-  left: 57%;
+
+  animation-duration: 8s;
 }
 
 .x6 {
   -webkit-animation: floatDown 5s infinite linear;
   animation: floatDown 5s infinite linear;
-  left: 80%;
+
+  animation-duration: 7s;
 }
 
 .x7 {
   -webkit-animation: floatDown 4s infinite linear;
   animation: floatDown 4s infinite linear;
-  left: 37%;
+
+  animation-duration: 6s;
 }
 
 .x8 {
   -webkit-animation: floatDown 3s infinite linear;
   animation: floatDown 3s infinite linear;
-  left: 62%;
+
+  animation-duration: 5s;
 }
 
 .x9 {
   -webkit-animation: floatDown 2s infinite linear;
   animation: floatDown 2s infinite linear;
-  left: 85%;
+
+  animation-duration: 4s;
 }
 
 .x10 {
   -webkit-animation: floatUp 10s infinite linear;
   animation: floatUp 10s infinite linear;
-  bottom: 0%;
+
+  animation-duration: 12s;
 }
 
 .x11 {
   -webkit-animation: floatUp 9s infinite linear;
   animation: floatUp 9s infinite linear;
-  bottom: 5%;
-  left: 15%;
+
+  animation-duration: 11s;
 }
 
 .x12 {
   -webkit-animation: floatUp 8s infinite linear;
   animation: floatUp 8s infinite linear;
-  bottom: 10%;
-  left: -15%;
+
+  animation-duration: 10s;
 }
 
 .x13 {
   -webkit-animation: floatUp 7s infinite linear;
   animation: floatUp 7s infinite linear;
-  bottom: 15%;
-  left: -34%;
+
+  animation-duration: 9s;
 }
 .x14 {
   -webkit-animation: floatUp 6s infinite linear;
   animation: floatUp 6s infinite linear;
-  bottom: 20%;
-  left: 57%;
+
+  animation-duration: 8s;
 }
 .x15 {
   -webkit-animation: floatUp 5s infinite linear;
   animation: floatUp 5s infinite linear;
-  bottom: 25%;
-  left: 80%;
+
+  animation-duration: 7s;
 }
 .x16 {
   -webkit-animation: floatUp 4s infinite linear;
   animation: floatUp 4s infinite linear;
-  bottom: 30%;
-  left: 37%;
+
+  animation-duration: 6s;
 }
 .x17 {
   -webkit-animation: floatUp 3s infinite linear;
   animation: floatUp 3s infinite linear;
-  bottom: 35%;
-  left: 62%;
+
+  animation-duration: 5s;
 }
 .x18 {
   -webkit-animation: floatUp 2s infinite linear;
   animation: floatUp 2s infinite linear;
-  bottom: 40%;
-  left: 85%;
+
+  animation-duration: 4s;
 }
 
 button:focus {
   outline: none;
-}
-
-@keyframes floatDown {
-  0% {
-    bottom: 100vh;
-    left: 100vw;
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    bottom: 10vh;
-    opacity: 0;
-  }
-}
-
-@keyframes floatUp {
-  0% {
-    top: 100vh;
-    left: 100vw;
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    top: 10vh;
-    opacity: 0;
-  }
 }
 
 .header {
@@ -234,7 +218,7 @@ button:focus {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 3em;
+  font-size: 2.5rem;
   text-shadow: 1px 1px 5px #1f1013;
 }
 
@@ -246,7 +230,7 @@ button:focus {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 3em;
+  font-size: 2.5rem;
   text-shadow: 1px 1px 5px #1f1013;
   display: flex;
   flex-direction: row;
@@ -265,7 +249,7 @@ button:focus {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 3em;
+  font-size: 2.5rem;
   text-shadow: 1px 1px 5px #1f1013;
   width: 100%;
   height: 40px;
@@ -273,6 +257,19 @@ button:focus {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 1500px) {
+  .header,
+  .header1,
+  .header2 {
+    font-size: 2rem;
+  }
+  button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
 }
 
 #head1,
@@ -340,6 +337,48 @@ button:focus {
   -moz-animation-delay: 0.2s;
   -o-animation-delay: 0.2s;
   animation-delay: 0.2s;
+}
+
+@keyframes floatDown {
+  0% {
+    bottom: 100vh;
+    left: 100vw;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    bottom: 10vh;
+    opacity: 0;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    top: 100vh;
+    left: -100vw;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    top: 10vh;
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes fadeIn {
@@ -508,3 +547,11 @@ button:focus {
   transform: translate(95vw, 90vh);
   transform: translate(95vw, 90vh);
 }
+
+/* 
+@media screen and (max-width: 1000px) {
+  .myF {
+    transform: rotate(-60deg);
+    left: 10vw;
+  }
+} */

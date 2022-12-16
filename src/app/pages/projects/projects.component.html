@@ -68,9 +68,11 @@
 
       <div class="detailTitleRes">
         <p class="fName">Responsibilities:</p>
-        <li *ngFor="let res of projectD.Responsibilities" class="descDetails">
-          {{ res }}
-        </li>
+        <ul class="resWrapper">
+          <li *ngFor="let res of projectD.Responsibilities" class="descDetails">
+            {{ res }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>

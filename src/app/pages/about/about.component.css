@@ -1,5 +1,5 @@
 .main {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .navBar {
-  width: 100vw;
+  width: 100%;
 }
 
 .divider {
@@ -18,9 +18,8 @@
 }
 
 .myFeatures {
-  min-width: 65%;
-  max-width: 65%;
-  height: 260px;
+  width: 65%;
+  /* height: 260px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -63,14 +62,14 @@
 
 .featureDetails h1 {
   color: rgb(93, 93, 93);
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
 .featureDetails h3 {
   color: rgb(129, 129, 129);
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -104,14 +103,14 @@
 
 .sectQ {
   color: rgb(66, 66, 66);
-  font-size: 30px;
+  font-size: 2rem;
   margin: 20px;
 }
 
 .sectBody {
   text-align: center;
   line-height: 25px;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: rgba(46, 46, 46, 0.7);
   width: 550px;
 }
@@ -124,7 +123,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -303,5 +302,47 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .myFeatures {
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .featureWrapp {
+    width: 35%;
+  }
+  .feature {
+    width: 80px;
+    height: 100px;
+    transform: rotate(0deg);
+  }
+  .icon {
+    transform: scale(1);
+  }
+  .featureDetails h1 {
+    font-size: 1.5rem;
+  }
+  .featureDetails h3 {
+    width: 50%;
+    font-size: 1rem;
+  }
+  .imgWrapp {
+    width: 250px;
+    height: 200px;
+  }
+  .sectQ {
+    font-size: 1.5rem;
+  }
+  .sectBody {
+    font-size: 1rem;
+    width: 300px;
+  }
+  .skillWrapp {
+    width: 80%;
+    font-size: 1rem;
   }
 }

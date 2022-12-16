@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit {
   }
 
   scrollDown() {
-    window.scroll(0, window.innerHeight + 10);
+    const doc = document.querySelector('.main');
+    if (doc) {
+      doc.scrollIntoView();
+    }
   }
 }
