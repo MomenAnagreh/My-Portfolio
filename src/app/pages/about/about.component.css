@@ -206,11 +206,6 @@
   position: relative;
 }
 
-.navBar {
-  -webkit-animation: goDown 0.5s linear;
-  animation: goDown 0.5s linear;
-}
-
 @keyframes enterRight2 {
   0% {
     right: calc(24% - 8%);
