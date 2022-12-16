@@ -20,9 +20,9 @@ button {
   align-items: center;
   position: absolute;
   background-color: transparent;
-  width: 250px;
-  height: 70px;
-  border-radius: 5px;
+  width: 15.625rem;
+  height: 4.375rem;
+  border-radius: 0.313rem;
   opacity: 0.5;
   top: 10vh;
   bottom: 0px;
@@ -43,8 +43,8 @@ button:hover {
   color: rgb(255, 255, 255);
   opacity: 0.8;
   transition: 0.3s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 5px #1f1013;
+  box-shadow: 0 0.5rem 0.063rem 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 0.063rem 0.063rem 0.313rem #1f1013;
 }
 
 .expandIcon {
@@ -56,7 +56,7 @@ button:hover {
   width: 0px;
   opacity: 0.75;
   background-color: white;
-  box-shadow: #e9f1f1 0px 100px 5px 1px;
+  box-shadow: #e9f1f1 0px 6.25rem 0.313rem 0.063rem;
   opacity: 0.5;
   bottom: 100vh;
   top: 0px;
@@ -71,7 +71,7 @@ button:hover {
   width: 0px;
   opacity: 0.75;
   background-color: white;
-  box-shadow: #e9f1f1 0px 100px 5px 1px;
+  box-shadow: #e9f1f1 0px 6.25rem 0.313rem 0.063rem;
   opacity: 0.5;
   bottom: 0px;
   top: 100vh;
@@ -82,7 +82,7 @@ button:hover {
 }
 
 .extra {
-  box-shadow: rgb(233 65 65) 0px 0px 5px 1px;
+  box-shadow: rgb(233 65 65) 0px 0px 0.313rem 0.063rem;
 }
 
 .x1 {
@@ -219,7 +219,7 @@ button:focus {
   font-weight: 400;
   color: white;
   font-size: 2.5rem;
-  text-shadow: 1px 1px 5px #1f1013;
+  text-shadow: 0.063rem 0.063rem 0.313rem #1f1013;
 }
 
 .header1 {
@@ -231,13 +231,13 @@ button:focus {
   font-weight: 400;
   color: white;
   font-size: 2.5rem;
-  text-shadow: 1px 1px 5px #1f1013;
+  text-shadow: 0.063rem 0.063rem 0.313rem #1f1013;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
 }
 
 .header2 {
@@ -250,24 +250,24 @@ button:focus {
   font-weight: 400;
   color: white;
   font-size: 2.5rem;
-  text-shadow: 1px 1px 5px #1f1013;
+  text-shadow: 0.063rem 0.063rem 0.313rem #1f1013;
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 93.75rem) {
   .header,
   .header1,
   .header2 {
     font-size: 2rem;
   }
   button {
-    width: 200px;
-    height: 50px;
+    width: 12.5rem;
+    height: 3.125rem;
     font-size: 1.5rem;
   }
 }
@@ -547,11 +547,3 @@ button:focus {
   transform: translate(95vw, 90vh);
   transform: translate(95vw, 90vh);
 }
-
-/* 
-@media screen and (max-width: 1000px) {
-  .myF {
-    transform: rotate(-60deg);
-    left: 10vw;
-  }
-} */
