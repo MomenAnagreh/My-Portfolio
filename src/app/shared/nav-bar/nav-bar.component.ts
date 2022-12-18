@@ -93,10 +93,7 @@ export class NavBarComponent implements OnInit {
       }
     }
     if (name === 'about') {
-      const doc = document.querySelector('.main');
-      if (doc) {
-        doc.scrollIntoView();
-      }
+      window.scroll(0, window.innerHeight);
     }
     if (name === 'projects') {
       const doc = document.querySelector('.mainProjects');

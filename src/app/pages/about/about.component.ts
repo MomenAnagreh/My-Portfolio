@@ -43,12 +43,12 @@ export class AboutComponent implements OnInit {
       }, 600);
     }
 
-    if (window.pageYOffset >= window.innerHeight - 10) {
+    if (window.pageYOffset >= window.innerHeight) {
       const doc = document.querySelector<HTMLElement>('.mainNav');
       const doc1 = document.querySelector<HTMLElement>('.divider');
 
       if (doc && doc1) {
-        doc1.style.position = 'relative';
+        doc1.style.position = 'static';
         doc.style.position = 'fixed';
         doc.classList.add('expand');
       }
