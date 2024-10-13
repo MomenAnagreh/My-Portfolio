@@ -24,11 +24,9 @@
       >
         <div class="projectWrapp" *ngIf="renderImg[i]" id="{{ project.name }}">
           <img class="projectImg" src="{{ project.image }}" alt="" />
-          <div class="projectImgCover" id="{{ project.name }}">
+          <div class="projectImgCover" id="{{ project.name }}" (click)="getProject(project.name)">
             <div class="nameWrapp">{{ project.name }}</div>
-            <button class="btnWrapp" (click)="getProject(project.name)">
-              Learn more
-            </button>
+            <div class="btnWrapp">(Click)</div>
           </div>
         </div>
 
@@ -41,7 +39,7 @@
     <button class="moveBtnR" (click)="next()">
       Next<mat-icon>arrow_forward_ios</mat-icon>
     </button>
-    <button class="moveBtnL" (click)="back()">
+    <button class="moveBtnL" (click)="back()" disabled>
       <mat-icon>arrow_back_ios</mat-icon>Prev
     </button>
     <button class="exitBtn" (click)="exit()">X</button>

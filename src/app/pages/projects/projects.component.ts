@@ -90,6 +90,13 @@ export class ProjectsComponent implements OnInit {
       ++this.index;
       const name = this.projects[this.index].name;
       this.projectD = this.dataService.filterDetails(name)[0];
+
+      let left = document?.getElementsByClassName('moveBtnL') as HTMLCollectionOf<HTMLButtonElement>;
+      left[0].disabled = false;
+    }
+    if (this.index === this.projects.length - 1) {
+      let right = document.getElementsByClassName('moveBtnR') as HTMLCollectionOf<HTMLButtonElement>;
+      right[0].disabled = true;
     }
   }
 
@@ -98,6 +105,13 @@ export class ProjectsComponent implements OnInit {
       --this.index;
       const name = this.projects[this.index].name;
       this.projectD = this.dataService.filterDetails(name)[0];
+
+      let right = document.getElementsByClassName('moveBtnR') as HTMLCollectionOf<HTMLButtonElement>;
+      right[0].disabled = false;
+    } 
+    if (this.index === 0) {
+      let left = document?.getElementsByClassName('moveBtnL') as HTMLCollectionOf<HTMLButtonElement>;
+      left[0].disabled = true;
     }
   }
 
