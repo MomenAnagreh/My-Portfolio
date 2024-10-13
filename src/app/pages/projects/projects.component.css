@@ -46,7 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   text-transform: capitalize;
   color: rgb(93, 93, 93);
   outline: none;
@@ -116,7 +116,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  cursor: default;
+  cursor: pointer;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
@@ -135,25 +135,13 @@
 }
 
 .btnWrapp {
-  width: 12.5rem;
-  height: 3.125rem;
-  border: 0.188rem solid rgb(233, 65, 65);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(233, 65, 65);
-  font-size: 1.563rem;
-  cursor: pointer;
+  font-size: 1.3rem;
   background-color: white;
   position: relative;
 
   -webkit-animation: goUp 0.2s linear;
   animation: goUp 0.2s linear;
-}
-
-.btnWrapp:hover {
-  background-color: rgb(233, 65, 65);
-  color: white;
 }
 
 .projectDetails {
@@ -172,49 +160,59 @@
   border: none;
   background-color: transparent;
   color: black;
-  font-size: 1.875rem;
+  font-size: 1.3rem;
   cursor: pointer;
   position: absolute;
-  top: 6%;
+  top: 7.5%;
   right: 3%;
 }
 
 .exitBtn:hover {
-  font-size: 2.188rem;
+  font-size: 1.5rem;
 }
 
 .moveBtnR {
+  width: 5rem;
   outline: none;
   border: none;
   background-color: transparent;
   color: black;
-  transform: scale(1);
+  transform: scale(0.8);
   cursor: pointer;
   position: absolute;
-  top: 6.5%;
-  right: 7%;
+  top: 7.5%;
+  right: 5%;
   font-size: 1.125rem;
 }
 
-.moveBtnR:hover {
-  transform: scale(1.5);
+.moveBtnR:hover:enabled {
+  transform: scale(1);
+}
+
+.moveBtnR:disabled {
+  color: gray;
 }
 
 .moveBtnL {
+  width: 5rem;
   outline: none;
   border: none;
   background-color: transparent;
   color: black;
-  transform: scale(1);
+  transform: scale(0.8);
   cursor: pointer;
   position: absolute;
-  top: 6.5%;
-  right: 13%;
+  top: 7.5%;
+  right: 10%;
   font-size: 1.125rem;
 }
 
-.moveBtnL:hover {
-  transform: scale(1.5);
+.moveBtnL:hover:enabled {
+  transform: scale(1);
+}
+
+.moveBtnL:disabled {
+  color: gray;
 }
 
 .projectImg1 {
@@ -308,18 +306,22 @@
     top: -18%;
     opacity: 0.2;
   }
+
   25% {
     top: -14%;
     opacity: 0.4;
   }
+
   50% {
     top: -10%;
     opacity: 0.6;
   }
+
   75% {
     top: -6%;
     opacity: 0.8;
   }
+
   100% {
     top: -2%;
     opacity: 1;
@@ -331,18 +333,22 @@
     bottom: -18%;
     opacity: 0.2;
   }
+
   25% {
     bottom: -14%;
     opacity: 0.4;
   }
+
   50% {
     bottom: -10%;
     opacity: 0.6;
   }
+
   75% {
     bottom: -6%;
     opacity: 0.8;
   }
+
   100% {
     bottom: -2%;
     opacity: 1;
@@ -354,18 +360,22 @@
     bottom: -100%;
     opacity: 0.2;
   }
+
   25% {
     bottom: -75%;
     opacity: 0.4;
   }
+
   50% {
     bottom: -50%;
     opacity: 0.6;
   }
+
   75% {
     bottom: -25%;
     opacity: 0.8;
   }
+
   100% {
     bottom: 0%;
     opacity: 1;
@@ -376,30 +386,37 @@
   0% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 0.6;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 @media screen and (max-width: 109.375rem) {
+
   .detailTitle,
   .detailTitle1,
   .detailTitleDesc,
   .detailTitleRes {
     font-size: 1.3rem;
   }
+
   .fName {
     font-size: 1.2rem;
   }
+
   .lName {
     font-size: 1rem;
   }
+
   .descDetails {
     font-size: 1rem;
   }
+
   .category {
     font-size: 1.4rem;
   }

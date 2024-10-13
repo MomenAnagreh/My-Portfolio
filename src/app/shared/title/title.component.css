@@ -9,14 +9,14 @@
 }
 
 .title h1 {
-  font-size: 2.813rem;
+  font-size: 2rem;
   color: rgb(93, 93, 93);
   font-weight: 500;
 }
 
 .underLine {
   width: 4.375rem;
-  border-bottom: 0.313rem solid rgb(93, 93, 93);
+  border-bottom: 0.1rem solid rgb(93, 93, 93);
 }
 
 .enterRightTop {
@@ -29,9 +29,11 @@
   0% {
     right: calc(45% - 15%);
   }
+
   50% {
     right: calc(45% - 30%);
   }
+
   100% {
     right: calc(45% - 45%);
   }
@@ -39,6 +41,6 @@
 
 @media screen and (max-width: 87.5rem) {
   .title h1 {
-    font-size: 2.188rem;
+    font-size: 1.5rem;
   }
 }

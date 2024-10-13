@@ -29,15 +29,21 @@ export class DataService {
   ];
 
   public myDetails: Details = {
-    question: 'What do I do?',
+    question: 'What I do?',
     details:
-      "I'm a Front-End Developer for EXTENSIV remotly. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.",
+      "I'm a Front-End Developer for FINRA remotly. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.",
     skills: [
       { name: 'CSS', percent: '90' },
       { name: 'HTML', percent: '90' },
       { name: 'JavaScript', percent: '80' },
       { name: 'TypeScript', percent: '70' },
-      { name: 'Angular', percent: '80' },
+      { name: 'Angular', percent: '90' },
+      { name: 'AWS', percent: '60' },
+      { name: 'Docker', percent: '80' },
+      { name: 'Jenkins', percent: '80' },
+      { name: 'Jasmine', percent: '90' },
+      { name: 'Karma', percent: '90' },
+      { name: 'ESlint', percent: '80' },
       { name: 'React', percent: '50' },
       { name: 'NestJS', percent: '40' },
       { name: 'MongoDB', percent: '40' },
@@ -53,11 +59,6 @@ export class DataService {
     {
       name: 'Pharmacy Platform (JUDI)',
       image: './assets/projectsImages/Capital-Rx-Web-Application.jpeg',
-      lang: 'Angular',
-    },
-    {
-      name: 'Mckinsey Insights App',
-      image: './assets/projectsImages/Mckinsey-Web-Application.jpg',
       lang: 'Angular',
     },
     {
@@ -116,27 +117,6 @@ export class DataService {
       time: 'Jun 2019 - Jan 2021',
     },
     {
-      Name: 'Mckinsey Insights App',
-      Client: 'Mckinsey & Company',
-      Description:
-        'McKinsey & Company is a global management consulting firm that provides professional services to corporations, governments and other organizations. They partner with their clients to unlock the potential of their people, embed transformative technologies in everything they do, and innovate sustainably. The impact they deliver helps clients achieve enduring change in their capabilities, and performance and speeds up the transition to sustainable and inclusive growth.',
-      Responsibilities: [
-        'Responsible for creating efficient design and developing user Interaction screens using Angular 5, HTML5, CSS3, and TypeScript.',
-        'Created an HTML5 navigation bar that is used for routing using RouterModule with items changing dynamically and data derived from the database.',
-        'Extensively used Angular 4 for heavy DOM manipulation.',
-        'Implemented a responsive web application using Bootstrap and CSS.',
-        'Worked with the BA team for a better understanding of functional requirements analyzed and designed the business requirements to be documented and implemented.',
-        'Executed unit testing cases using Jasmine and Karma.',
-        'Designed User interface web forms using Angular Reactive forms.',
-        'Used CSS3 to define text alignment, size, borders, and many other typographic characteristics along with media queries.',
-        'Used Agile Methodology and actively participated in daily Scrums for the software development life cycle.',
-        'Achieved successful version control using GIT and performed simple debugging activities using Chrome developer tools.',
-      ],
-      image: './assets/projectsImages/Mckinsey-Web-Application.jpg',
-      location: 'Los Angeles, CA',
-      time: 'Feb 2018 - May 2019',
-    },
-    {
       Name: 'Engineering Collaboration System',
       Client: 'AECOM',
       Description:
@@ -155,7 +135,7 @@ export class DataService {
       ],
       image: './assets/projectsImages/AECOM-Web-Application.jpg',
       location: 'Los Angeles, CA',
-      time: 'May 2017 - Feb 2018',
+      time: 'Feb 2018 - May 2019',
     },
   ];
 
