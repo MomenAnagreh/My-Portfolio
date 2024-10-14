@@ -1,6 +1,20 @@
 <div class="mainNav">
-  <button class="btn" id="0" (click)="move('home')">Home</button>
-  <button class="btn" id="1" (click)="move('about')">About</button>
-  <button class="btn" id="2" (click)="move('projects')">Projects</button>
-  <button class="btn" id="3" (click)="move('contact')">Contact</button>
+  <div class="sect">
+    <button class="btn" id="0" (click)="move('home')">Home</button>
+    <button class="btn" id="1" (click)="move('about')">About</button>
+    <button class="btn" id="2" (click)="move('projects')">Projects</button>
+    <button class="btn" id="3" (click)="move('contact')">Contact</button>
+  </div>
+
+  <div class="sect">
+    <button class="icon" id="4" title="LinkedIn" (click)="goTo('linkedin')">
+      <i class="fa-brands fa-linkedin"></i>
+    </button>
+    <button class="icon" id="5" title="Github" (click)="goTo('github')">
+      <i class="fa-brands fa-github"></i>
+    </button>
+    <button class="icon" id="6" title="Resume" (click)="goTo('resume')">
+      <i class="fa-solid fa-file"></i>
+    </button>
+  </div>
 </div>

@@ -108,4 +108,16 @@ export class NavBarComponent implements OnInit {
       }
     }
   }
+
+  goTo(location: string) {
+    if(location === "linkedin"){
+      window.open('https://www.linkedin.com/in/momen-alanagreh/', '_blank');
+    }
+    if(location === "github"){
+      window.open('https://github.com/MomenAnagreh', '_blank');
+    }
+    if(location === "resume"){
+      window.open('./assets/resume.pdf', '_blank')
+    }
+  }
 }
