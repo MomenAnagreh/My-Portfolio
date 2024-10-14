@@ -59,14 +59,14 @@ export class ProjectsComponent implements OnInit {
     if (window.pageYOffset > window.innerHeight * 1.4) {
       setTimeout(() => {
         this.show1 = true;
-      }, 400);
+      }, 600);
     }
 
     if (window.pageYOffset > window.innerHeight * 1.3 + 200) {
       for (let i = 0; i < this.renderImg.length; i++) {
         setTimeout(() => {
           this.renderImg[i] = true;
-        }, 300 + (i + 1) * 300);
+        }, 900);
       }
     }
   }
