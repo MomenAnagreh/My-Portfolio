@@ -144,15 +144,28 @@
   animation: goUp 0.2s linear;
 }
 
-.projectDetails {
+.projectDetailsWrap {
   width: 100%;
   height: 100%;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+}
+
+.projectDetails {
+  width: 80%;
+  height: 80%;
   background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   position: absolute;
+  cursor: default;
+  border-radius: 0.313rem;
 }
 
 .exitBtn {
@@ -163,8 +176,8 @@
   font-size: 1.3rem;
   cursor: pointer;
   position: absolute;
-  top: 7.5%;
-  right: 3%;
+  top: 4%;
+  right: 2%;
 }
 
 .exitBtn:hover {
@@ -180,8 +193,8 @@
   transform: scale(0.8);
   cursor: pointer;
   position: absolute;
-  top: 7.5%;
-  right: 5%;
+  top: 4%;
+  right: 4%;
   font-size: 1.125rem;
 }
 
@@ -202,8 +215,8 @@
   transform: scale(0.8);
   cursor: pointer;
   position: absolute;
-  top: 7.5%;
-  right: 10%;
+  top: 4%;
+  right: 9%;
   font-size: 1.125rem;
 }
 
@@ -216,7 +229,7 @@
 }
 
 .projectImg1 {
-  height: 77%;
+  height: 80%;
   width: 50%;
   border-radius: 0.313rem;
   cursor: default;
@@ -232,7 +245,8 @@
   background-color: rgb(236, 235, 235);
   color: black;
   padding-left: 2.5rem;
-  padding-top: 0.625rem;
+  padding-top: 2rem;
+  border-radius: 0.313rem;
 }
 
 .detailTitle {
@@ -246,7 +260,7 @@
 }
 
 .detailTitle1 {
-  width: 50%;
+  width: 70%;
   font-size: 1.3rem;
   font-weight: 400;
   display: flex;

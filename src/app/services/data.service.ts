@@ -31,7 +31,7 @@ export class DataService {
   public myDetails: Details = {
     question: 'What I do?',
     details:
-      "I'm a Front-End Developer for FINRA remotly. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.",
+      "I'm a Senior Angular Web Developer. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.",
     skills: [
       { name: 'CSS', percent: '90' },
       { name: 'HTML', percent: '90' },
@@ -52,6 +52,11 @@ export class DataService {
 
   public projects: Project[] = [
     {
+      name: 'CAT CAIS PORTAL',
+      image: '',
+      lang: 'Angular',
+    },
+    {
       name: 'Skubana Dashboard',
       image: './assets/projectsImages/Skubana-Web-Application.png',
       lang: 'Angular',
@@ -69,6 +74,31 @@ export class DataService {
   ];
 
   public projectDetails = [
+    {
+      Name: 'CAT CAIS PORTAL',
+      Client: 'FINRA',
+      Description:
+        'CAT CAIS Portal is a web-based tool that allows CAT Reporters to monitor and manage data submissions to the Customer and Account Information System (CAIS). The Portal includes end-to-end capability for providing complete and accurate data to CAIS, including the ability to manually enter and upload data, monitor submissions, and review and correct errors. ',
+      Responsibilities: [
+        'Led the development of the website using Angular (versions 11 to 16), demonstrating expertise in modern web application frameworks.',
+        'Utilized HTML5 and CSS3 to create responsive and visually appealing user interfaces, ensuring cross-browser compatibility and adherence to web standards.',
+        'Employed TypeScript for writing more robust and type-safe code, enhancing the maintainability and reliability of the application.',
+        'Configured and managed Jenkins pipelines for continuous integration and delivery, automating build and deployment processes',
+        'Created and managed Docker images to containerize the application, ensuring consistency across development, testing, and production environments.',
+        'Leveraged various AWS services and console features to host and scale the application, demonstrating proficiency in cloud computing and infrastructure managementUsed Ngrx to manage the state through the whole application and isolated side effects to promote a cleaner component architecture.',
+        'Ensured high code quality and coding standards compliance using lint tools, contributing to the maintainability and readability of the codebase.',
+        'Transitioned from TSLint to ESLint for improved code analysis and linting, aligning with modern development practices. Delivered high-quality tested code that follows best practices by using Jasmine and Karma.',
+        'Implemented unit testing using Jasmine and Karma to validate individual components, ensuring application stability and performance',
+        'Successfully upgraded the Angular framework from version 11 to 16, managing dependencies and mitigating migration challenges.',
+        'Deployed and utilized internal artifacts within the development lifecycle, streamlining the development process.',
+        'Worked in an Agile-Scrum environment, contributing to team collaboration, sprint planning, and iterative development.Used Jenkins for deployment and CI/CD.',
+        'Leveraged various Angular features such as modules, components, services, directives, and RxJS Observables for asynchronous operations to build a robust and modular web application ensuring smooth data flow and user interactions.',
+        'Converted Nginx to Apache reverse proxy, optimizing performance, security, and flexibility as an intermediary between clients and backend servers.'
+      ],
+      image: '',
+      location: 'Remote',
+      time: 'Apr 2023 - Present',
+    },
     {
       Name: 'Skubana Dashboard',
       Client: 'EXTENSIV',
@@ -90,7 +120,7 @@ export class DataService {
       ],
       image: './assets/projectsImages/Skubana-Web-Application.png',
       location: 'Remote',
-      time: 'Jan 2021 - present',
+      time: 'Jan 2021 - Apr 2023',
     },
     {
       Name: 'Pharmacy Platform (JUDI)',

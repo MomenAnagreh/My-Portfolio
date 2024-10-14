@@ -119,6 +119,22 @@ export class ProjectsComponent implements OnInit {
     this.popUp = false;
   }
 
+  stopPropagation(event: MouseEvent) {
+    event.stopPropagation();
+  }
+
+  // Listen for keydown events
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'ArrowRight') {
+      this.next();
+    } else if (event.key === 'ArrowLeft') {
+      this.back();
+    } else if (event.key === 'Escape') {
+      this.exit()
+    }
+  }
+
   cat(id: number) {
     ['all', 'angular', 'react'].forEach((elem, i) => {
       const doc = document.getElementById(`${elem}`);

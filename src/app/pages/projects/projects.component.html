@@ -23,7 +23,8 @@
         (mouseleave)="imgLeave(project.name)"
       >
         <div class="projectWrapp" *ngIf="renderImg[i]" id="{{ project.name }}">
-          <img class="projectImg" src="{{ project.image }}" alt="" />
+          <img *ngIf="project.image" class="projectImg" src="{{ project.image }}" alt="" />
+          <img *ngIf="!project.image" class="projectImg" src="./assets/projectsImages/No_Image_Available.jpg" alt="" />
           <div class="projectImgCover" id="{{ project.name }}" (click)="getProject(project.name)">
             <div class="nameWrapp">{{ project.name }}</div>
             <div class="btnWrapp">(Click)</div>
@@ -35,42 +36,45 @@
     </div>
   </div>
 
-  <div class="projectDetails" *ngIf="popUp">
-    <button class="moveBtnR" (click)="next()">
-      Next<mat-icon>arrow_forward_ios</mat-icon>
-    </button>
-    <button class="moveBtnL" (click)="back()" disabled>
-      <mat-icon>arrow_back_ios</mat-icon>Prev
-    </button>
-    <button class="exitBtn" (click)="exit()">X</button>
-    <img class="projectImg1" src="{{ projectD.image }}" alt="" />
-    <div class="projectDetailText">
-      <div class="detailTitle">
-        <div class="detailTitle1">
-          <p class="fName">Project:</p>
-          <p class="lName">{{ projectD.Name }}</p>
+  <div class="projectDetailsWrap" *ngIf="popUp" (click)="exit()">
+    <div class="projectDetails" (click)="stopPropagation($event);">
+      <button class="moveBtnR" (click)="next()">
+        Next<mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+      <button class="moveBtnL" (click)="back()" disabled>
+        <mat-icon>arrow_back_ios</mat-icon>Prev
+      </button>
+      <button class="exitBtn" (click)="exit()">X</button>
+      <img *ngIf="projectD.image" class="projectImg1" src="{{ projectD.image }}" alt="" />
+      <img *ngIf="!projectD.image" class="projectImg1" src="./assets/projectsImages/No_Image_Available.jpg" alt="" />
+      <div class="projectDetailText">
+        <div class="detailTitle">
+          <div class="detailTitle1">
+            <p class="fName">Project:</p>
+            <p class="lName">{{ projectD.Name }}</p>
+          </div>
+          <p class="descDetails">{{ projectD.location }}</p>
         </div>
-        <p class="descDetails">{{ projectD.location }}</p>
-      </div>
-      <div class="detailTitle">
-        <div class="detailTitle1">
-          <p class="fName">Client:</p>
-          <p class="lName">{{ projectD.Client }}</p>
+        <div class="detailTitle">
+          <div class="detailTitle1">
+            <p class="fName">Client:</p>
+            <p class="lName">{{ projectD.Client }}</p>
+          </div>
+          <p class="descDetails">{{ projectD.time }}</p>
         </div>
-        <p class="descDetails">{{ projectD.time }}</p>
-      </div>
-      <div class="detailTitleDesc">
-        <p class="fName">Description:</p>
-        <p class="descDetails">{{ projectD.Description }}</p>
-      </div>
-
-      <div class="detailTitleRes">
-        <p class="fName">Responsibilities:</p>
-        <ul class="resWrapper">
-          <li *ngFor="let res of projectD.Responsibilities" class="descDetails">
-            {{ res }}
-          </li>
-        </ul>
+        <div class="detailTitleDesc">
+          <p class="fName">Description:</p>
+          <p class="descDetails">{{ projectD.Description }}</p>
+        </div>
+  
+        <div class="detailTitleRes">
+          <p class="fName">Responsibilities:</p>
+          <ul class="resWrapper">
+            <li *ngFor="let res of projectD.Responsibilities" class="descDetails">
+              {{ res }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
